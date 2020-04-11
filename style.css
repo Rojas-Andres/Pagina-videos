@@ -1,5 +1,5 @@
 body{
-    background-color: #047C74;
+    background-color: #75BDEC;
     margin: 0;
     font-family: 'Muli', sans-serif;
     
@@ -48,4 +48,33 @@ body{
 }
 .header__menu--profile img{
     margin-right: 8px; /* Separamos un poquito la letra de la imagen  */
+}
+
+
+/* Estelizando el menu  */
+.menu{
+    text-align: center;
+    align-items: center;
+    
+}
+.menu__titulo{
+    color: white;
+}
+/* Los valores relativos son muy importante al momento de cambiar de dispositivo o del tamaño de la pagina */
+.input{
+    background-color: rgba(255, 255, 255, 0.1); /* Con esta linea el input se ajusta al background de la pagina */
+    border: 2px solid white; /* Le quitamos el borde por defecto que tiene y lo colocamos solido */
+    border-radius: 25px; /* Bordeamos el input */
+    font-family: 'Muli', sans-serif;
+    padding: 16px;
+    font-size: 16px;
+    width: 70%;   
+    outline: none; /* Le quitamos el por defecto al momento de ingresar al buscador */
+    
+}
+/* Esto es considerado un pseudoelemento */
+::placeholder{
+
+    color:white; /* Ponemos todos los  placeholder de los input para que aparezcan en color blanco*/
+    font-size: 14px;
 }
