@@ -1,10 +1,15 @@
 body{
     background-color: #047C74;
     margin: 0;
+    font-family: 'Muli', sans-serif;
+    
 }
 .header{
     width: 100%;/*el 100% es para que el elemento adopte todo el ancho del contenedor*/
     height: 80px;/*El alto del contenedor*/
+    display: flex; /*Es para que coloque el header__menu ul a la misma altura que la imagen */
+    justify-content: space-between;/* Con esto lo colocamos a la otra esquina */
+    align-items: center; /* Centramos todos los items que tenemos dentro de header */
 }
 .header__img{
     width: 90px; /*El tamaño de la imagen*/
@@ -13,17 +18,34 @@ body{
     margin-left: 17px;
 }
 .header__menu{
-    margin-right:30px ;
+    margin-right:93px ;
+    align-items: center; 
+}
+.header__menu:hover ul,ul:hover  { /* El hover es una pseudo clase y se usa para seleccionar elementos cuando pasa el mouse sobre ellos. */
+    display:block;
 }
 .header__menu ul {
-    /* display: none; *//* Es para no ver nada de la lista */
+    display: none; /* Es para no ver nada de la lista */
     list-style: none;/* Quitarle los puntos por defecto que tiene la lista */
     padding: 0px;
     position: absolute; /* Para posisionarlo donde queramos con relacion al padre que en este caso es el header */
     text-align: right;
-    margin : 0px 0px 0px 14px;
+    margin : 0px 0px 0px -45px;
+    
+}
+.header__menu li a {
+    color: azure;
+    text-decoration: none; /* Le quitamos la linea por defecto que contiene */
+}
+.header__menu li a:hover{
+    text-decoration: underline; /* La linea que le quitamos cada vez que le hagamos hover en li a , se la ponemos aca 
+    cada vez que nos paremos en cuenta y cerrar sesion */
 }
 .header__menu--profile{
     margin-right: 30px; /* Espaciado entre la imagen y el texto */
-    width: 40px;
+    display: flex;
+    color:white;
+}
+.header__menu--profile img{
+    margin-right: 8px; /* Separamos un poquito la letra de la imagen  */
 }
