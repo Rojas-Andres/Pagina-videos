@@ -1,3 +1,29 @@
 body{
-    background-color: #7454FC;
+    background-color: #047C74;
+    margin: 0;
+}
+.header{
+    width: 100%;/*el 100% es para que el elemento adopte todo el ancho del contenedor*/
+    height: 80px;/*El alto del contenedor*/
+}
+.header__img{
+    width: 90px; /*El tamaño de la imagen*/
+    /*Estos margin definen que tan separado debe de estar */
+    margin-top: 6px;
+    margin-left: 17px;
+}
+.header__menu{
+    margin-right:30px ;
+}
+.header__menu ul {
+    /* display: none; *//* Es para no ver nada de la lista */
+    list-style: none;/* Quitarle los puntos por defecto que tiene la lista */
+    padding: 0px;
+    position: absolute; /* Para posisionarlo donde queramos con relacion al padre que en este caso es el header */
+    text-align: right;
+    margin : 0px 0px 0px 14px;
+}
+.header__menu--profile{
+    margin-right: 30px; /* Espaciado entre la imagen y el texto */
+    width: 40px;
 }
