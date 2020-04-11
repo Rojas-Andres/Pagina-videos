@@ -14,7 +14,7 @@ body{
     padding-top: 37px;
     
 }
-.carrusel__item{
+.carrusel-item{
     background: blue;
     width: 200px;
     height: 250px;
@@ -27,22 +27,41 @@ body{
     cursor: pointer;/* Es cuando estemos dentro de cada uno de los items el puntero cambie  */
     transition: 450ms all; /* Para que cada vez que hagamos hover se ponga mas lenta */
     transform-origin: center left;/* Si no colocamos esta linea se sale el primer elemento  */
+    position: relative; /* Para que los iconos queden dentro del contenedor de la imagen y no arriba */
 
 }
 /* La virguliña funciona para cuando no este con el hover */
-.carrusel__item:hover ~ .carrusel__item {
+.carrusel-item:hover ~ .carrusel-item {
     transform:translate3d(100px,0,0);/* Esto permite que todos los elementos se desplacen a la derecha */
     /* display:inline-block ; */
 
 }
 
 /* Cuando me pose sobre uno los otros se pongan mas opacos */
-.carrusel__container:hover .carrusel__item {
+.carrusel__container:hover .carrusel-item {
     opacity: 0.3;
 }
 /* Cuando este en hover el container y tambien el item , el item que esta en hover cambie de opacidad  */
-.carrusel__container:hover .carrusel__item:hover{ 
+.carrusel__container:hover .carrusel-item:hover{ 
     transform: scale(1.5); /* Aumente el tamaño en 1.5 */
     opacity: 1;
     
+}
+
+.carrusel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;/* Para que la imagen recupere su tamaño original */
+}
+.carrusel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px; /* Los textos no esten tan juntos  */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
