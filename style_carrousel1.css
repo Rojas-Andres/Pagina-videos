@@ -25,6 +25,8 @@ body{
     display:inline-block ;
     margin-right:10px;/* Distancia entre cada uno de los items */
     cursor: pointer;/* Es cuando estemos dentro de cada uno de los items el puntero cambie  */
+    transition: 450ms all; /* Para que cada vez que hagamos hover se ponga mas lenta */
+    transform-origin: center left;/* Si no colocamos esta linea se sale el primer elemento  */
 
 }
 /* La virguliña funciona para cuando no este con el hover */
