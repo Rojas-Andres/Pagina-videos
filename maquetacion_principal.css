@@ -1,0 +1,163 @@
+body{
+    background-color: #75BDEC;
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    
+}
+.header{
+    width: 100%;/*el 100% es para que el elemento adopte todo el ancho del contenedor*/
+    height: 80px;/*El alto del contenedor*/
+    display: flex; /*Es para que coloque el header__menu ul a la misma altura que la imagen */
+    justify-content: space-between;/* Con esto lo colocamos a la otra esquina */
+    align-items: center; /* Centramos todos los items que tenemos dentro de header */
+}
+.header__img{
+    width: 90px; /*El tamaño de la imagen*/
+    /*Estos margin definen que tan separado debe de estar */
+    margin-top: 6px;
+    margin-left: 17px;
+}
+.header__menu{
+    margin-right:93px ;
+    align-items: center; 
+}
+.header__menu:hover ul,ul:hover  { /* El hover es una pseudo clase y se usa para seleccionar elementos cuando pasa el mouse sobre ellos. */
+    display:block;
+}
+.header__menu ul {
+    display: none; /* Es para no ver nada de la lista */
+    list-style: none;/* Quitarle los puntos por defecto que tiene la lista */
+    padding: 0px;
+    position: absolute; /* Para posisionarlo donde queramos con relacion al padre que en este caso es el header */
+    text-align: right;
+    margin : 0px 0px 0px -45px;
+    
+}
+.header__menu li a {
+    color: azure;
+    text-decoration: none; /* Le quitamos la linea por defecto que contiene */
+}
+.header__menu li a:hover{
+    text-decoration: underline; /* La linea que le quitamos cada vez que le hagamos hover en li a , se la ponemos aca 
+    cada vez que nos paremos en cuenta y cerrar sesion */
+}
+.header__menu--profile{
+    margin-right: 30px; /* Espaciado entre la imagen y el texto */
+    display: flex;
+    color:white;
+}
+.header__menu--profile img{
+    margin-right: 8px; /* Separamos un poquito la letra de la imagen  */
+}
+
+
+/* Estelizando el menu  */
+.menu{
+    text-align: center;
+    align-items: center;
+    
+}
+.menu__titulo{
+    color: white;
+}
+/* Los valores relativos son muy importante al momento de cambiar de dispositivo o del tamaño de la pagina */
+.input{
+    background-color: rgba(255, 255, 255, 0.1); /* Con esta linea el input se ajusta al background de la pagina */
+    border: 2px solid white; /* Le quitamos el borde por defecto que tiene y lo colocamos solido */
+    border-radius: 25px; /* Bordeamos el input */
+    font-family: 'Muli', sans-serif;
+    padding: 16px;
+    font-size: 16px;
+    width: 70%;   
+    outline: none; /* Le quitamos el por defecto al momento de ingresar al buscador */
+    
+}
+/* Esto es considerado un pseudoelemento */
+::placeholder{
+
+    color:white; /* Ponemos todos los  placeholder de los input para que aparezcan en color blanco*/
+    font-size: 14px;
+}
+.inicio{
+    color: white;
+    margin-left: 30px;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
+.carrusel{
+    width: 100%; /* Ocupe todo el ancho de la pagina */
+    overflow: scroll; /* Movernos */
+    padding: 30px;/* No comience pegado a la pagina si no que comience con una cierta distancia */
+    position: relative; /* Los hijos de este se posicionen dependiendo del padre */
+}
+.carrusel__container{
+    white-space: nowrap; /* Esta propiedad es para que los elementos no queden uno por debajo del otro */
+    margin: 70px 0px;
+    padding-bottom: 37px;
+    padding-top: 37px;
+    
+}
+.carrusel-item{
+    background: blue;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    /* Los elementos por defecto tienen un block entonces cada elemento se coloca uno por debajo del otro , le cambiamos el display*/
+    display:inline-block ;
+    margin-right:10px;/* Distancia entre cada uno de los items */
+    cursor: pointer;/* Es cuando estemos dentro de cada uno de los items el puntero cambie  */
+    transition: 450ms all; /* Para que cada vez que hagamos hover se ponga mas lenta */
+    transform-origin: center left;/* Si no colocamos esta linea se sale el primer elemento  */
+    position: relative; /* Para que los iconos queden dentro del contenedor de la imagen y no arriba */
+
+}
+/* La virguliña funciona para cuando no este con el hover */
+.carrusel-item:hover ~ .carrusel-item {
+    transform:translate3d(100px,0,0);/* Esto permite que todos los elementos se desplacen a la derecha */
+    /* display:inline-block ; */
+
+}
+
+/* Cuando me pose sobre uno los otros se pongan mas opacos */
+.carrusel__container:hover .carrusel-item {
+    opacity: 0.3;
+}
+/* Cuando este en hover el container y tambien el item , el item que esta en hover cambie de opacidad  */
+.carrusel__container:hover .carrusel-item:hover{ 
+    transform: scale(1.5); /* Aumente el tamaño en 1.5 */
+    opacity: 1;
+    
+}
+
+.carrusel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;/* Para que la imagen recupere su tamaño original */
+}
+.carrusel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px; /* Los textos no esten tan juntos  */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.carrusel-item__details--img {
+    width: 20px;
+  }
+  
+
+
+
+.carrusel-item__details--title {
+    color: white;
+    margin: 5px 0px 0px 0px;
+  }
