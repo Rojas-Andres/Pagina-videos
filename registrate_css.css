@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    
+}
+.header{
+    width: 100%;/*el 100% es para que el elemento adopte todo el ancho del contenedor*/
+    height: 80px;/*El alto del contenedor*/
+    display: flex; /*Es para que coloque el header__menu ul a la misma altura que la imagen */
+    justify-content: space-between;/* Con esto lo colocamos a la otra esquina */
+    align-items: center; /* Centramos todos los items que tenemos dentro de header */
+    
+    background-color: #75BDEC;
+}
+.header__img{
+    width: 90px; /*El tamaño de la imagen*/
+    /*Estos margin definen que tan separado debe de estar */
+    margin-top: 6px;
+    margin-left: 17px;
+}
+.contenedor{
+    background: linear-gradient(#75BDEC,#D48CEC);
+    display: flex; /* Une con el header */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height:676px;
+    color: white;
+}
+.contenedor__registro{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 60px 68px 40px;  
+    min-height: 500px;
+    width: 300px;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.contenedor__registro--form{
+    display: flex;
+    flex-direction: column ;
+    height: 293px;
+}
+
+.input{
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;   
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    
+}
+.button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline:none;
+    border-radius: 25px;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 2px;/* Separacion entre cada una de las letras */
+    cursor: pointer;
+    margin-top: 20px;
+}
+.inicia{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 2px;/* Separacion entre cada una de las letras */
+    cursor: pointer;
+}
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+::placeholder{
+    color: white;
+}
+.footer{
+    background-color: #D48CEC;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;    
+    
+}
+.footer__item{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    
+    height: 40px;
+}
+.footer__item:hover{
+    text-decoration: underline;
+    
+}
